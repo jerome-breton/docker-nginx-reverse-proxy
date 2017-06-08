@@ -8,7 +8,7 @@ This docker image is meant to build a lightweight landing page to display multip
 Usage
 -----
 
-###Locations
+### Locations
 
 You need a configuration file `locations.csv` containing a list of services :
 
@@ -34,15 +34,15 @@ prof,PHPProfiler,http://profiler.local,profiler.local,http://profiler:80,profile
 
 Keep in mind that this is not a fully complient CSV file. It's only a basic split on lines and commas. Please do not try using quotes and special chars. If comma doesn't fit your needs, see the advanced section below.
 
-###Images
+### Images
 
 Images given in locations array are relative to the path `/usr/share/nginx/html/img` so you must link a folder there to see the logos of your favorite services.
 
-###docker usage
+### docker usage
 
     docker run -d -p 80:80 -v $(pwd)/conf:/conf -v $(pwd)/img:/usr/share/nginx/html/img jeromebreton/nginx-reverse-proxy
 
-###docker-compose usage
+### docker-compose usage
 
     version: '2'
     services:
@@ -59,7 +59,7 @@ Images given in locations array are relative to the path `/usr/share/nginx/html/
 Advanced usage
 --------------
 
-###Change locations separator
+### Change locations separator
 
 You can set an environment variable called `SEPARATOR`, it will be used as a column separator for reading `locations.csv` file. It defaults to `,`.
 
@@ -77,7 +77,7 @@ or
           SEPARATOR: "|"
 
 
-###Inject variables in locations.csv
+### Inject variables in locations.csv
 
 The `locations.csv` file variables will be expanded. So you can use any variable in it and define it like an environement variable when running your container.
 
@@ -93,7 +93,7 @@ And then in your `docker-compose.yml` you can add :
           DOMAIN: "test.local"
 
 
-###Change landing page HTML/CSS
+### Change landing page HTML/CSS
 
 Landing page is built with a simple SH file containing all the template. This file is packaged in the image but you can link it via volumes if you want to edit it.
 
@@ -114,7 +114,7 @@ Landing page is built with a simple SH file containing all the template. This fi
 ```
 
 
-###Change nginx routing configuration
+### Change nginx routing configuration
 
 Nginx configuration is built with the same idea than landing page. A simple SH file containing all the template. This file is packaged in the image but you can link it via volumes if you want to edit it.
 
