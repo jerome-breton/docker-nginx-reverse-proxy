@@ -106,8 +106,15 @@ link it via volumes if you want to edit it.
 3. Edit the copied file to your needs
 4. Relaunch the container with a new volume for this file
 
-    volumes:
-      - ./proxy/index.html.sh:/proxy/index.html.sh
+    version: '2'
+    services:
+      proxy:
+        image: jeromebreton/nginx-reverse-proxy
+          [...]
+        volumes:
+          - ./proxy/conf:/conf
+          - ./proxy/img:/usr/share/nginx/html/img
+          - ./proxy/index.html.sh:/proxy/index.html.sh
 
 
 Change nginx routing configuration
@@ -121,7 +128,14 @@ This file is built in container but you can link it via volumes if you want to e
 3. Edit the copied file to your needs
 4. Relaunch the container with a new volume for this file
 
-    volumes:
-      - ./proxy/default.conf.sh:/proxy/default.conf.sh
+    version: '2'
+    services:
+      proxy:
+        image: jeromebreton/nginx-reverse-proxy
+          [...]
+        volumes:
+          - ./proxy/conf:/conf
+          - ./proxy/img:/usr/share/nginx/html/img
+          - ./proxy/default.conf.sh:/proxy/default.conf.sh
 
 This container is built on **nginx:alpine** so any information stated here https://hub.docker.com/_/nginx/ should be true.
