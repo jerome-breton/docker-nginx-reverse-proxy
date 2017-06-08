@@ -61,11 +61,12 @@ Advanced usage
 
 ###Change locations separator
 
-If an environment variable `SEPARATOR` is set, it will be used for reading `locations.csv` file. It defaults to `,`.
+You can set an environment variable called `SEPARATOR`, it will be used as a column separator for reading `locations.csv` file. It defaults to `,`.
 
     docker run -d [...] -e SEPARATOR="|" [...] jeromebreton/nginx-reverse-proxy
 
 or
+
 
     version: '2'
     services:
@@ -84,6 +85,7 @@ Your `locations.csv` could look like that :
 
     mail,Mailcatcher,http://mail.${DOMAIN},mailcatcher.${DOMAIN},http://mail:80,mailcatcher.png
     pma,phpMyAdmin,http://pma.${DOMAIN},pma.${DOMAIN},http://phpmyadmin:80,pma.svg
+
 
 And then in your `docker-compose.yml` you can add :
 
