@@ -44,16 +44,17 @@ Images given in locations array are relative to the path `/usr/share/nginx/html/
 
 ### docker-compose usage
 
-    version: '2'
-    services:
-      proxy:
-        image: jeromebreton/nginx-reverse-proxy
-        ports:
-          - 80:80
-        volumes:
-          - ./proxy/conf:/conf
-          - ./proxy/img:/usr/share/nginx/html/img
-
+```
+version: '2'
+services:
+  proxy:
+    image: jeromebreton/nginx-reverse-proxy
+    ports:
+      - 80:80
+    volumes:
+      - ./proxy/conf:/conf
+      - ./proxy/img:/usr/share/nginx/html/img
+```
 
 
 Advanced usage
@@ -67,14 +68,15 @@ You can set an environment variable called `SEPARATOR`, it will be used as a col
 
 or
 
-
-    version: '2'
-    services:
-      proxy:
-        image: jeromebreton/nginx-reverse-proxy
-        [...]
-        env:
-          SEPARATOR: "|"
+```
+version: '2'
+services:
+  proxy:
+    image: jeromebreton/nginx-reverse-proxy
+    [...]
+    env:
+      SEPARATOR: "|"
+```
 
 
 ### Inject variables in locations.csv
@@ -102,15 +104,15 @@ Landing page is built with a simple SH file containing all the template. This fi
 3. Edit the copied file to your needs
 4. Relaunch the container with a new volume for this file
 ```
-    version: '2'
-    services:
-      proxy:
-        image: jeromebreton/nginx-reverse-proxy
-          [...]
-        volumes:
-          - ./proxy/conf:/conf
-          - ./proxy/img:/usr/share/nginx/html/img
-          - ./proxy/index.html.sh:/proxy/index.html.sh
+version: '2'
+services:
+  proxy:
+    image: jeromebreton/nginx-reverse-proxy
+      [...]
+    volumes:
+      - ./proxy/conf:/conf
+      - ./proxy/img:/usr/share/nginx/html/img
+      - ./proxy/index.html.sh:/proxy/index.html.sh
 ```
 
 
