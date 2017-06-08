@@ -1,5 +1,0 @@
-pma,phpMyAdmin,http://pma.${DOMAIN}:${PORT}0,pma.${DOMAIN},http://phpmyadmin:80,pma.svg
-magento,Magento,http://magento.${DOMAIN}:${PORT}0,magento.${DOMAIN},http://php:80,magento.svg
-mail,Mailcatcher,http://mail.${DOMAIN}:${PORT}0,mail.${DOMAIN},http://mail:80,mailcatcher.png
-phpredmin,Redis,http://redis.${DOMAIN}:${PORT}0,redis.${DOMAIN},http://phpredmin:80,redis.svg
-profiler,PHP Profiler,http://profiler.${DOMAIN}:${PORT}0,profiler.${DOMAIN},http://php:8080,profiler.svg

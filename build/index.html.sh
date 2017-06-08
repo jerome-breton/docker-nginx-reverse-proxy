@@ -16,7 +16,7 @@ cat <<BEGIN
             }
             menu {
                 max-width: 1000px;
-                margin:10px auto;
+                margin:0 auto;
             }
             menu ul {
                 width:100%;
@@ -83,7 +83,7 @@ cat <<DOMAINS
                     </a>
                 </li>
 DOMAINS
-done < $ALIAS
+done < $LOCATIONS
 
 cat <<END
             </ul>

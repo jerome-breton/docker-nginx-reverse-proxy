@@ -27,6 +27,6 @@ server {
     }
 }
 DOMAINS
-done < $ALIAS
+done < $LOCATIONS
 
 
