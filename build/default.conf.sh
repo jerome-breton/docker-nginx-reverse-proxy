@@ -21,9 +21,9 @@ server {
     server_name ${dom};
     location / {
         proxy_pass ${dest};
-        proxy_set_header X-Real-IP $$remote_addr;
-        proxy_set_header X-Forwarded-For $$remote_addr;
-        proxy_set_header Host $$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$remote_addr;
+        proxy_set_header Host \$host;
     }
 }
 DOMAINS
