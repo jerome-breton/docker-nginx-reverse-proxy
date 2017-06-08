@@ -105,7 +105,7 @@ link it via volumes if you want to edit it.
 2. `docker cp <running_conainer_name>:/proxy/index.html.sh ./proxy/index.html.sh`
 3. Edit the copied file to your needs
 4. Relaunch the container with a new volume for this file
-
+```
     version: '2'
     services:
       proxy:
@@ -115,7 +115,7 @@ link it via volumes if you want to edit it.
           - ./proxy/conf:/conf
           - ./proxy/img:/usr/share/nginx/html/img
           - ./proxy/index.html.sh:/proxy/index.html.sh
-
+```
 
 Change nginx routing configuration
 ----------------------------------
@@ -127,7 +127,7 @@ This file is built in container but you can link it via volumes if you want to e
 2. `docker cp <running_conainer_name>:/proxy/default.conf.sh ./proxy/default.conf.sh`
 3. Edit the copied file to your needs
 4. Relaunch the container with a new volume for this file
-
+```
     version: '2'
     services:
       proxy:
@@ -137,5 +137,6 @@ This file is built in container but you can link it via volumes if you want to e
           - ./proxy/conf:/conf
           - ./proxy/img:/usr/share/nginx/html/img
           - ./proxy/default.conf.sh:/proxy/default.conf.sh
+```
 
 This container is built on **nginx:alpine** so any information stated here https://hub.docker.com/_/nginx/ should be true.
