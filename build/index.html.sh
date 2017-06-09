@@ -78,7 +78,7 @@ do
 cat <<DOMAINS
                 <li>
                     <a href="${url}">
-                        <span class="img" style="background-image:url('img/${img}')">${name}</span>
+                        <span class="img" style="background-image:url('${img}')">${name}</span>
                         <span class="lib">${name}</span>
                     </a>
                 </li>
