@@ -73,7 +73,7 @@ cat <<BEGIN
             <ul>
 BEGIN
 
-while read code name url dom dest img
+while read name url dom dest img
 do
 cat <<DOMAINS
                 <li>

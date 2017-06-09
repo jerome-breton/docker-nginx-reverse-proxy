@@ -12,24 +12,24 @@ Usage
 
 You need a configuration file `locations.csv` containing a list of services :
 
-| code |     label    | url in landing page      | domain for routing | service location     |                       image for landing page                      |
-|:----:|:------------:|--------------------------|--------------------|----------------------|:-----------------------------------------------------------------:|
-| mage |    Magento   | http://magento.local     | magento.local      | http://php:80        | //s3-us-west-2.amazonaws.com/svgporn.com/logos/magento.svg        |
-|  wp  |   Wordpress  | http://wordpress.local   | wordpress.local    | http://php:8080      | //s3-us-west-2.amazonaws.com/svgporn.com/logos/wordpress-icon.svg |
-| mail |  Mailcatcher | http://mailcatcher.local | mailcatcher.local  | http://mail:80       | /img/mailcatcher.png                                              |
-|  red |     Redis    | http://phpredmin.local   | phpredmin.local    | http://phpredmin:80  | //s3-us-west-2.amazonaws.com/svgporn.com/logos/redis.svg          |
-|  pma |  phpMyAdmin  | http://pma.local         | pma.local          | http://phpmyadmin:80 | /img/pma.svg                                                      |
-| prof | PHP Profiler | http://profiler.local    | profiler.local     | http://profiler:80   | /img/profiler.svg                                                 |
+|     label    | url in landing page      | domain for routing | service location     |                       image for landing page                      |
+|:------------:|--------------------------|--------------------|----------------------|:-----------------------------------------------------------------:|
+|    Magento   | http://magento.local     | magento.local      | http://php:80        | //s3-us-west-2.amazonaws.com/svgporn.com/logos/magento.svg        |
+|   Wordpress  | http://wordpress.local   | wordpress.local    | http://php:8080      | //s3-us-west-2.amazonaws.com/svgporn.com/logos/wordpress-icon.svg |
+|  Mailcatcher | http://mailcatcher.local | mailcatcher.local  | http://mail:80       | /img/mailcatcher.png                                              |
+|     Redis    | http://phpredmin.local   | phpredmin.local    | http://phpredmin:80  | //s3-us-west-2.amazonaws.com/svgporn.com/logos/redis.svg          |
+|  phpMyAdmin  | http://pma.local         | pma.local          | http://phpmyadmin:80 | /img/pma.svg                                                      |
+| PHP Profiler | http://profiler.local    | profiler.local     | http://profiler:80   | /img/profiler.svg                                                 |
 
 will result in this file :
 
 ```
-mage,Magento,http://magento.local,magento.local,http://php:80,//s3-us-west-2.amazonaws.com/svgporn.com/logos/magento.svg
-wp,Wordpress,http://wordpress.local,wordpress.local,http://php:8080,//s3-us-west-2.amazonaws.com/svgporn.com/logos/wordpress-icon.svg
-mail,Mailcatcher,http://mailcatcher.local,mailcatcher.local,http://mail:80,/img/mailcatcher.png
-red,Redis,http://phpredmin.local,phpredmin.local,http://phpredmin:80,//s3-us-west-2.amazonaws.com/svgporn.com/logos/redis.svg
-pma,phpMyAdmin,http://pma.local,pma.local,http://phpmyadmin:80,/img/pma.svg
-prof,PHPProfiler,http://profiler.local,profiler.local,http://profiler:80,/img/profiler.svg
+Magento,http://magento.local,magento.local,http://php:80,//s3-us-west-2.amazonaws.com/svgporn.com/logos/magento.svg
+Wordpress,http://wordpress.local,wordpress.local,http://php:8080,//s3-us-west-2.amazonaws.com/svgporn.com/logos/wordpress-icon.svg
+Mailcatcher,http://mailcatcher.local,mailcatcher.local,http://mail:80,/img/mailcatcher.png
+Redis,http://phpredmin.local,phpredmin.local,http://phpredmin:80,//s3-us-west-2.amazonaws.com/svgporn.com/logos/redis.svg
+phpMyAdmin,http://pma.local,pma.local,http://phpmyadmin:80,/img/pma.svg
+PHPProfiler,http://profiler.local,profiler.local,http://profiler:80,/img/profiler.svg
 ```
 
 *Keep in mind that this is not a fully complient CSV file. It's only a basic split on lines and commas. Please do not try using quotes and special chars. If comma doesn't fit your needs, see the advanced section below.*

@@ -12,7 +12,7 @@ server {
 }
 BEGIN
 
-while read code name url dom dest image
+while read name url dom dest image
 do
 cat <<DOMAINS
 
